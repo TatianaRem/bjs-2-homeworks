@@ -8,5 +8,7 @@ function compareArrays(arr1, arr2) {
 
 //Расчет среднего значения возраста пользователей одного пола
 function getUsersNamesInAgeRange(users, gender) {
-	return result = users.filter((user) => user.gender === gender).map((user) => user.age).reduce((acc, age, index, arr) => acc + age / arr.length, 0);
+	return result = users.filter((user) => user.gender === gender)
+    .map((user) => user.age)
+    .reduce((acc, age, index, arr) => acc + age / arr.length, 0);
 }
