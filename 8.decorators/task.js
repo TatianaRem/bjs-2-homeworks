@@ -35,7 +35,7 @@ function debounceDecoratorNew(func, delay) {
 	let timeoutId = null;
 
 	function wrapper(...args) {
-		wrapper.allCounts++;
+		wrapper.allCount++;
 
 		if (timeoutId) {
 			clearTimeout(timeoutId);
@@ -53,7 +53,7 @@ function debounceDecoratorNew(func, delay) {
 	}
 
 	//Хранение количества всех вызовов декоратора и количество вызова декорированной функции
-	wrapper.allCounts = 0;
+	wrapper.allCount = 0;
 	wrapper.count = 0;
 
 	return wrapper;
